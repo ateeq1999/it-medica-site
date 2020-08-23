@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row mb-5 pb-5">
             <div class="col-sm-5" data-aos="fade-up" data-aos-offset="-500">
-                <img src="images/contact.jpg" alt="contact" class="img-fluid">
+                <img src="{{ $contactus->image_path }}" alt="contact" class="img-fluid">
             </div>
             <div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
-                <h3 class="font-weight-medium text-dark mt-5 mt-lg-0">Got A Problem</h3>
-                <h5 class="text-dark mb-5">Lorem ipsum dolor sit amet, consectetur pretium</h5>
+                <h3 class="font-weight-medium text-dark mt-5 mt-lg-0">{{ $contactus->title }}</h3>
+                <h5 class="text-dark mb-5">{!!$contactus->description!!}</h5>
                 <form>
                     <div class="row">
                         <div class="col-sm-6">
@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="col-sm-12">
-                            <a href="#" class="btn btn-secondary">SEND</a>
+                            <a href="#" class="btn btn-secondary">@lang('site.send')</a>
                         </div>
                     </div>
                 </form>

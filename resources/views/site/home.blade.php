@@ -9,7 +9,7 @@
         @include('partials.testimonial', [ 'testimonials' => $testimonials ])
         {{-- next --}}
         @include('partials.clients', [ 'clients' => $clients ])
-        @include('partials.pricing', [ 'pricing' => $pricing ])
+        {{-- @include('partials.pricing', [ 'pricing' => $pricing ]) --}}
         @include('partials.contactus', [ 'contactus' => $contactus ])
     </div>
 @endsection

@@ -27,12 +27,10 @@ class HomeController extends Controller
         $service = Block::where('name', 'service')->first();
         $about = Block::where('name', 'about')->first();
         $contactus = Block::where('name', 'contactus')->first();
-        $project = Block::where('name', 'project')->first();
-        $pricing = Block::where('name', 'pricing')->first();
-        $test  = Block::where('name', 'test')->first();
+        $project = Block::where('name', 'about')->first();
+        $pricing = Block::where('name', 'service')->first();
+        $test  = Block::where('name', 'itro')->first();
 
-        // dd($home->title);
-        
         return view('site.home', compact(
             'services', 'clients', 'home', 'service',
             'about', 'projects', 'pricing', 'contactus',

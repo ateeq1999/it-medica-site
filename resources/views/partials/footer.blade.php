@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-sm-6">
                     <address>
-                        <p>143 castle road 517</p>
-                        <p class="mb-4">district, kiyev port south Canada</p>
+                        <p>@lang('site.address1')</p>
+                        <p class="mb-4">@lang('site.address2')</p>
                         <div class="d-flex align-items-center">
                             <p class="mr-4 mb-0 ml-2 text-right">@lang('site.company-number')</p>
                             <a href="mailto:info@medica.com" class="footer-link">info@medica.com</a>
@@ -69,15 +69,15 @@
         <div class="container">
             <div class="d-flex justify-content-between align-items-center">
                 <div class="d-flex align-items-center">
-                    <img src="images/logo.svg" alt="logo" class="mr-3">
-                    <p class="mb-0 text-small pt-1">© 2019-2020 <a href="#" class="text-white" target="_blank">@lang('site.dev')</a>. @lang('site.right').</p>
+                    <img src="{{ asset('site/images/logo.svg') }}" alt="logo" class="mr-3">
+                    <p class="mb-0 text-small pt-1">© 2019-2020 <a href="#" class="text-white" target="_blank">@lang('site.dev')</a>. @lang('site.rights').</p>
                 </div>
                 <div>
-                    <div class="d-flex">
+                    {{-- <div class="d-flex">
                         <a href="#" class="text-small text-white mx-2 footer-link">Privacy Policy </a>          
                         <a href="#" class="text-small text-white mx-2 footer-link">Customer Support </a>
                         <a href="#" class="text-small text-white mx-2 footer-link">Careers </a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

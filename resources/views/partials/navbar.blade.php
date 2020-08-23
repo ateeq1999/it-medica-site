@@ -28,6 +28,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#testimonial">@lang('site.clients')</a>
                 </li>
+                <li class="dropdown tasks-menu">
+                    {{-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-flag-o"></i></a> --}}
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('site.lang')</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            {{--<!-- inner menu: contains the actual data -->--}}
+                            <ul class="menu">
+                             @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                    <li>
+                                        <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            {{ $properties['native'] }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-danger" style="background-color: black !important; border-color: black !important" href="#contact">@lang('site.phone-number')</a>
                 </li>

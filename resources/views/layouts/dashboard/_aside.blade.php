@@ -36,24 +36,10 @@
             @if (auth()->user()->hasPermission('read_clients'))
             <li><a href="{{route('dashboard.clients.index')}}"><i class="fa fa-th"></i><span>@lang('site.clients')</span></a></li>
             @endif
-            @if (auth()->user()->hasPermission('read_profiles'))
-            <li><a href="{{route('dashboard.profiles.index')}}"><i class="fa fa-th"></i><span>@lang('site.profiles')</span></a></li>
-            @endif
-            @if (auth()->user()->hasPermission('read_settings'))
-            <li><a href="{{route('dashboard.settings.index')}}"><i class="fa fa-th"></i><span>@lang('site.settings')</span></a></li>
-            @endif
             @if (auth()->user()->hasPermission('read_orders'))
             <li><a href="{{route('dashboard.orders.index')}}"><i class="fa fa-th"></i><span>@lang('site.orders')</span></a></li>
             @endif
 
-            @if (auth()->user()->hasPermission('read_locations'))
-                <li><a href="{{ route('dashboard.locations.index') }}"><i class="fa fa-th"></i><span>@lang('site.locations')</span></a></li>
-            @endif
-            
-            @if (auth()->user()->hasPermission('read_settings'))
-                <li><a href="{{ route('dashboard.settings.index') }}"><i class="fa fa-th"></i><span>@lang('site.settings')</span></a></li>
-            @endif
-           
             @if (auth()->user()->hasPermission('read_infos'))
                 <li><a href="{{ route('dashboard.infos.index') }}"><i class="fa fa-th"></i><span>@lang('site.infos')</span></a></li>
             @endif

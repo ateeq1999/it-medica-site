@@ -151,5 +151,9 @@ return [
     'company-number' => '+249 91 235 2160',
     'slamtk' => 'Salamtk',
     'mshfana' => 'Mashfana',
+    'contact-us' => 'Contact Us',
     'tranning' => 'Medical Tranning',
+    'address1' => 'Khartoum (2) Al Jazeera Street next to Badr Park',
+    'address2' => 'North Ozone Park - Zahra Tower - Fifth Floor - Apartment (501)',
+    'dev' => 'Ateeq Ali',
 ];
