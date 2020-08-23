@@ -11,6 +11,8 @@ use App\Setting;
 use App\Info;
 use App\Location;
 use App\Order;
+use App\Service;
+use App\Block;
 
 class HomeController extends Controller
 {
@@ -18,21 +20,24 @@ class HomeController extends Controller
     public function index()
     {
         $clients = Client::all();
-        $categories = Category::all();
-        
-        return view('site.pages.home', compact('categories','clients'));
-    }
+        $services = Service::all();
+        $projects = Category::all();
+        $testimonials = Category::all();
+        $home = Block::where('name', 'home')->first();
+        $service = Block::where('name', 'service')->first();
+        $about = Block::where('name', 'about')->first();
+        $contactus = Block::where('name', 'contactus')->first();
+        $project = Block::where('name', 'project')->first();
+        $pricing = Block::where('name', 'pricing')->first();
+        $test  = Block::where('name', 'test')->first();
 
-    public function category_products(Category $category)
-    {
-        $products = $category->products()->paginate(10);
+        // dd($home->title);
         
-        return view('site.pages.category_products', compact('category','products'));
-    }
-
-    public function category_product_show(Product $product)
-    {
-        return view('site.pages.category_product_show', compact('product'));
+        return view('site.home', compact(
+            'services', 'clients', 'home', 'service',
+            'about', 'projects', 'pricing', 'contactus',
+            'testimonials', 'test', 'project'
+        ));
     }
 
     public function profile()

@@ -14,6 +14,8 @@
             Route::resource('settings','SettingController')->except(['show']);
             Route::resource('categories','CategoryController')->except(['show']);
             Route::resource('infos','InfoController')->except(['show']);
+            Route::resource('blocks','BlockController')->except(['show']);
+            Route::resource('services','ServiceController')->except(['show']);
             Route::resource('locations','LocationController')->except(['show']);
             Route::resource('products','ProductController')->except(['show']);
 
