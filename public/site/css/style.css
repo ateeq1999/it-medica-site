@@ -13133,7 +13133,7 @@ input[type="button"].btn-block {
 
 .page-link:hover {
   z-index: 2;
-  color: #0056b3;
+  color: #e95f5f;
   text-decoration: none;
   background-color: #e9ecef;
   border-color: #dee2e6;
@@ -18357,7 +18357,8 @@ h6, .h6 {
 
 .footer {
   color: #e5e5e5;
-  background: #201e1e url(../images/footer_bg.svg);
+  /* background: #201e1e url(../images/footer_bg.svg); */
+  background: #0b5a97 url(../images/footer_bg.svg);
   background-size: cover;
   background-position: left bottom;
 }
@@ -18427,7 +18428,8 @@ h6, .h6 {
   padding: 1.875rem 1rem;
   /* background: #f34949; */
   /* background: #201e1e; */
-  background: #000000;
+  /* background: #000000; */
+  background: #3c8dbc;
 }
 
 @media (max-width: 991px) {
@@ -18511,7 +18513,7 @@ h6, .h6 {
 }
 
 .navbar .navbar-nav .nav-item .nav-link.active {
-  background: rgba(0, 0, 0, 0.2);
+  background: #0b5a97;
   border-radius: 50px;
 }
 
@@ -18623,7 +18625,6 @@ html {
   background: url("../images/banner-bg.svg");
   /* background-color: #4e4a4a; */
   /* background: #201e1e url(../images/banner-bg.svg); */
-  /* background-color: #867a7a url(../images/footer_bg.svg);; */
   background-repeat-y: no-repeat;
   background-position: 0 -50px;
   padding-top: 103px;
@@ -18702,7 +18703,8 @@ section {
 
 .testimonial {
   /* background: #232324 url("../images/testimonial-bg.svg"); */
-  background-color: #7a7a7a;
+  /* background-color: #7a7a7a; */
+  background-color: #0b5a97;
   padding: 100px 0 70px 0;
   background-size: cover;
 }

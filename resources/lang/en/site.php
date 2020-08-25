@@ -156,4 +156,5 @@ return [
     'address1' => 'Khartoum (2) Al Jazeera Street next to Badr Park',
     'address2' => 'North Ozone Park - Zahra Tower - Fifth Floor - Apartment (501)',
     'dev' => 'Ateeq Ali',
+    'send' => 'Send,'
 ];

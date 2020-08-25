@@ -30,7 +30,7 @@
                 </li>
                 <li class="dropdown tasks-menu">
                     {{-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-flag-o"></i></a> --}}
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('site.lang')</a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color: white !important">@lang('site.lang')</a>
                     <ul class="dropdown-menu">
                         <li>
                             {{--<!-- inner menu: contains the actual data -->--}}
@@ -46,9 +46,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-danger" style="background-color: black !important; border-color: black !important" href="#contact">@lang('site.phone-number')</a>
-                </li>
+                {{-- <li class="nav-item">
+                    <a class="nav-link btn btn-danger" href="#contact">@lang('site.phone-number')</a>
+                </li> --}}
             </ul>
         </div>
     </div>
