@@ -11,7 +11,7 @@
                             <p class="mt-3"> 
                                 {!!$home->description!!}
                             </p>
-                            <a href="#" style="background-color: black !important; border-color: black !important" class="btn btn-danger text-white mt-3">@lang('site.more')</a>
+                            <a href="#" style="background-color: #3c8dbc !important; border-color: #3c8dbc !important" class="btn btn-danger text-white mt-3">@lang('site.more')</a>
                         </div>
                         <div class="mt-5 mt-lg-0">
                             <img src="{{ $home->image_path }}" alt="marsmello" class="img-fluid" data-aos="zoom-in-up">
