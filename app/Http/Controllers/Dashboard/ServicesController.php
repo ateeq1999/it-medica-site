@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
-class ServiceController extends Controller
+class ServicesController extends Controller
 {
     /**
      * Display a listing of the resource.
