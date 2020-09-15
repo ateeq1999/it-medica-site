@@ -9,8 +9,8 @@ return [
             'categories'=>'c,r,u,d',
             'products'=>'c,r,u,d',
             'clients'=>'c,r,u,d',
-            'orders'=>'c,r,u,d',
-            'infos'=>'c,r,u,d',
+            'projects'=>'c,r,u,d',
+            'blogs'=>'c,r,u,d',
         ],
         'admin' => []
     ],

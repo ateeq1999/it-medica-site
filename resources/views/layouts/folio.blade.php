@@ -32,7 +32,7 @@
         *{
             font-family: 'Cairo', sans-serif !important;
             direction: rtl !important;
-            text-align: right;
+            /* text-align: right; */
         }
     </style>
 @endif

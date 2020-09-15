@@ -40,8 +40,8 @@
             <li><a href="{{route('dashboard.orders.index')}}"><i class="fa fa-th"></i><span>@lang('site.orders')</span></a></li>
             @endif
 
-            @if (auth()->user()->hasPermission('read_infos'))
-                <li><a href="{{ route('dashboard.infos.index') }}"><i class="fa fa-th"></i><span>@lang('site.infos')</span></a></li>
+            @if (auth()->user()->hasPermission('read_projects'))
+                <li><a href="{{ route('dashboard.projects.index') }}"><i class="fa fa-th"></i><span>@lang('site.projects')</span></a></li>
             @endif
         </ul>
     </section>

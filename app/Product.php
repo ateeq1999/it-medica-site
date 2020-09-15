@@ -29,11 +29,6 @@ class Product extends Model
         return $this->belongsTo('App\Category');
     }
 
-    public function orders()
-    {
-     return $this->belongsToMany('App\Order','product_order');
-    }
-    
     public function getNameAttribute($value){
         return ucfirst($value);
     }
