@@ -13,6 +13,7 @@
             Route::resource('categories','CategoryController')->except(['show']);
             Route::resource('blocks','BlockController')->except(['show']);
             Route::resource('services','ServicesController')->except(['show']);
+            Route::resource('projects','ProjectController')->except(['show']);
             Route::resource('products','ProductController')->except(['show']);
 
             Route::resource('clients','ClientController')->except(['show']);

@@ -6,11 +6,11 @@
 
         <section class="content-header">
 
-            <h1>@lang('site.infos')</h1>
+            <h1>@lang('site.projects')</h1>
 
         <ol class="breadcrumb">
             <li><a href="{{route('dashboard.index')}}"><i class="fa fa-dashboard"></i> @lang('site.dashboard')</a></li>
-            <li><a href="{{route('dashboard.infos.index')}}"> @lang('site.infos')</a></li>
+            <li><a href="{{route('dashboard.projects.index')}}"> @lang('site.projects')</a></li>
             <li class="active"> @lang('site.edit')</li>
             
         </ol>
@@ -24,24 +24,34 @@
                </div>
                <div class="box-body">
                 @include('partials._errors')
-               <form action="{{route('dashboard.infos.update',$info->id)}}" method="POST" enctype="multipart/form-data">
+               <form action="{{route('dashboard.projects.update',$project->id)}}" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     {{method_field('put')}}
 
                     @foreach (config('translatable.locales') as $locale)
                 
                         <div class="form-group">
-                            <label>@lang('site.' .$locale. '.bio')</label>
-                            <input type="text" name="{{$locale}}[bio]"  class="form-control" value="{{$info->bio}}">
+                            <label>@lang('site.' .$locale. '.name')</label>
+                            <input type="text" name="{{$locale}}[name]"  class="form-control" value="{{$project->name}}">
                         </div>
 
                         <div class="form-group">
                             <label>@lang('site.' .$locale.'.description')</label>
-                            <textarea  name="{{$locale}}[description]"  class="form-control ckeditor" >{{$info->description}}</textarea>
+                            <textarea  name="{{$locale}}[description]"  class="form-control ckeditor" >{{$project->description}}</textarea>
                         </div>
                             
                     @endforeach
 
+                    {{--image and image preview--}}
+                    <div class="form-group">
+                    <label>@lang('site.image')</label>
+                    <input type="file" name="image" placeholder="@lang('site.image')" class="form-control image">
+                    </div>
+                    <div class="form-group">
+                    <img src="{{$project->image_path}}" style="width: 100px;" class="img-thumbnail image-preview" alt=""> 
+
+                    </div>
+                 
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-edit"></i>@lang('site.edit')</button>
                     </div>

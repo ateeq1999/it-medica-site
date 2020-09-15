@@ -14,9 +14,6 @@ class BlockSeeder extends Seeder
      */
     public function run()
     {
-        Block::truncate();
-        Service::truncate();
-        Project::truncate();
         
         $blocks = [
             [
@@ -126,7 +123,7 @@ class BlockSeeder extends Seeder
             Block::create($block);
         }
         foreach ($services as $service) {
-            Service::create($services);
+            Service::create($service);
         }
         foreach ($services as $project) {
             Project::create($project);
