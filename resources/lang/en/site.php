@@ -156,5 +156,13 @@ return [
     'address1' => 'Khartoum (2) Al Jazeera Street next to Badr Park',
     'address2' => 'North Ozone Park - Zahra Tower - Fifth Floor - Apartment (501)',
     'dev' => 'Ateeq Ali',
-    'send' => 'Send,'
+    'send' => 'Send',
+    'contactus' => 'Contact',
+    'intro-title' => 'IT MEDICA',
+    'intro-message' => 'A leading medical company, in the field of electronic health',
+
+    'work-com' => 'WORKS COMPLETED',
+    'year-exp' => 'YEARS OF EXPERIENCE',
+    'total-clients' => 'TOTAL CLIENTS',
+    'award-won' => 'AWARD WON',
 ];

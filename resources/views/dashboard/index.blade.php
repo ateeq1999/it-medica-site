@@ -33,7 +33,7 @@
                 </div>
 
                 {{--products--}}
-                <div class="col-lg-3 col-xs-6">
+                {{-- <div class="col-lg-3 col-xs-6">
                     <div class="small-box bg-green">
                         <div class="inner">
                             <h3>{{ $products_count }}</h3>
@@ -45,7 +45,7 @@
                         </div>
                         <a href="{{ route('dashboard.products.index') }}" class="small-box-footer">@lang('site.read') <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
-                </div>
+                </div> --}}
 
                 {{--clients--}}
                 <div class="col-lg-3 col-xs-6">

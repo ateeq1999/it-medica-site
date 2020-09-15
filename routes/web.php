@@ -11,7 +11,7 @@ Route::get('/categories/{category/show}', function () {
 })->name('categories.show');
 
 Route::get('/', function(){
-    return redirect()->route('site.test');
+    return redirect()->route('site.home');
 });
 
 Auth::routes(['register'=>true]);
@@ -21,7 +21,8 @@ Route::group(
         'prefix' => LaravelLocalization::setLocale(),
         'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
     ], function(){ 
-        Route::get('/', 'HomeController@index')->name('site.test');
+        Route::get('/', 'HomeController@index')->name('site.home');
+        Route::get('/folio', 'HomeController@folio')->name('site.folio');
         Route::get('profile', 'HomeController@profile')->name('site.profile');
         Route::get('clients', 'HomeController@clients')->name('site.clients');
         Route::get('contact-us', 'HomeController@contact_us')->name('site.contact-us');

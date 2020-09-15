@@ -11,17 +11,17 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" placeholder="Name*">
+                                <input type="text" class="form-control" id="name" placeholder="@lang('site.name')*">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="mail" placeholder="Email*">
+                                <input type="email" class="form-control" id="mail" placeholder="@lang('site.email')*">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <textarea name="message" id="message" class="form-control" placeholder="Message*" rows="5"></textarea>
+                                <textarea name="message" id="message" class="form-control" placeholder="@lang('site.message')*" rows="5"></textarea>
                             </div>
                         </div>
                         <div class="col-sm-12">

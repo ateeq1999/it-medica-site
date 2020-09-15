@@ -6,8 +6,6 @@ use App\User;
 use App\Order;
 use App\Product;
 use App\Category;
-use App\Setting;
-use App\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -21,21 +19,20 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $profiles_count=Profile::count();
-        $settings_count=Setting::count();
         $products_count=Product::count();
         $categories_count=Category::count();
         $clients_count=Order::count();
         $users_count=User::whereRoleIs('admin')->count();
 
-        $sales_data=Order::select(
-            DB::raw('YEAR(created_at) as year'),
-            DB::raw('MONTH(created_at) as month'),
-            DB::raw('SUM(total_price) as sum')
-        )->groupBy('month')->get();
+        // $sales_data=Order::select(
+        //     DB::raw('YEAR(created_at) as year'),
+        //     DB::raw('MONTH(created_at) as month'),
+        //     DB::raw('SUM(total_price) as sum')
+        // )->groupBy('month')->get();
+        $sales_data = [];
 
 
-        return view('dashboard.index',compact('settings_count', 'profiles_count', 'products_count','categories_count','users_count','clients_count','sales_data'));
+        return view('dashboard.index',compact('products_count','categories_count','users_count','clients_count','sales_data'));
     }
 
     /**
