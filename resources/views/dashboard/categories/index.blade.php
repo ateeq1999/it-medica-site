@@ -48,10 +48,10 @@
                                 <tr>
                                     <th>#</th>
                                     <th>@lang('site.name')</th>
-                                    <th>@lang('site.products_count')</th>
+                                    <th>@lang('site.blogs_count')</th>
                                     <th>@lang('site.description')</th>
                                     <th>@lang('site.image')</th>
-                                    <th>@lang('site.related_products')</th>
+                                    <th>@lang('site.related_blogs')</th>
                                     <th>@lang('site.action')</th>
                                 </tr>
                             </thead>
@@ -60,10 +60,10 @@
                                     <tr>
                                     <td>{{$index + 1}}</td>
                                     <td>{{$category->name}}</td>
-                                    <td>{{$category->products->count()}}</td>
+                                    <td>{{$category->blogs->count()}}</td>
                                     <td>{!!$category->description!!}</td>
                                     <td><img src="{{$category->image_path}}" style="width: 100px;" class="img-thumbnail"></td>
-                                    <td><a href="{{route('dashboard.products.index',['category_id'=>$category->id])}}" class="btn btn-info btn-sm">@lang('site.related_products')</a></td>
+                                    <td><a href="{{route('dashboard.blogs.index',['category_id'=>$category->id])}}" class="btn btn-info btn-sm">@lang('site.related_blogs')</a></td>
 
                                    
                                     <td>

@@ -43,7 +43,6 @@ return [
     'edit_order'=>'Edit_order',
     'previous_orders'=>'Previous_orders',
 
-
     'category'=>'Category',
 
     'all.categories'=>' All.categories',
@@ -55,11 +54,6 @@ return [
     'products_count'=>'Products_count',
     'related_products'=>'Related_products',
     'show_products'=>'Show_products',
-
-
-
-
-
 
     'client_name'=>'Client_name',
     'created_at'=>'Created_at',
@@ -148,7 +142,7 @@ return [
     'social' => 'Social Share',
     'our-products' => 'Products',
     'tele' => 'Telemedicine',
-    'company-number' => '+249 91 235 2160',
+    'company-number' => '249 91 235 2160',
     'slamtk' => 'Salamtk',
     'mshfana' => 'Mashfana',
     'contact-us' => 'Contact Us',
@@ -156,7 +150,9 @@ return [
     'address1' => 'Khartoum (2) Al Jazeera Street next to Badr Park',
     'address2' => 'North Ozone Park - Zahra Tower - Fifth Floor - Apartment (501)',
     'dev' => 'Ateeq Ali',
+    'pannel' => 'Ademin Pannel',
     'send' => 'Send',
+    'subject' => 'الموضوع',
     'contactus' => 'Contact',
     'intro-title' => 'IT MEDICA',
     'intro-message' => 'A leading medical company, in the field of electronic health',
@@ -165,4 +161,13 @@ return [
     'year-exp' => 'YEARS OF EXPERIENCE',
     'total-clients' => 'TOTAL CLIENTS',
     'award-won' => 'AWARD WON',
+    'body' => 'Body',
+
+    'company-name' => 'ITMEDICA',
+    'company-email' => 'medica@support.com',
+    'company-phone' => '+249 91 235 2160',
+    'company-profile' => 'Electronic Health',
+    'send-message' => 'Send Message Us',
+    'designed-by' => 'Designed by',
+    'copy-rights' => 'Copyright',
 ];

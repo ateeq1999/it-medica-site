@@ -9,7 +9,7 @@
                 <div class="col-md-6">
                   <div class="title-box-2">
                     <h5 class="title-left">
-                      Send Message Us
+                      @lang('site.send-message')
                     </h5>
                   </div>
                   <div>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="@lang('site.subject')" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                             <div class="validate"></div>
                           </div>
                         </div>
@@ -62,9 +62,9 @@
                         {!!$contactus->description!!}
                     </p>
                     <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span> 329 WASHINGTON ST BOSTON, MA 02108</li>
-                      <li><span class="ion-ios-telephone"></span> (617) 557-0089</li>
-                      <li><span class="ion-email"></span> contact@example.com</li>
+                      <li><span class="ion-ios-location"></span> @lang('site.address1')</li>
+                      <li><span class="ion-ios-telephone"></span> @lang('site.company-phone')</li>
+                      <li><span class="ion-email"></span> @lang('site.company-email')</li>
                     </ul>
                   </div>
                   <div class="socials">

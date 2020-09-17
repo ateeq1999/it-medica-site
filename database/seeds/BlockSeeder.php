@@ -73,6 +73,28 @@ class BlockSeeder extends Seeder
                     Thank you IT Medica International Limited is a Sudanese company registered in Thanon Companies with the number (51853).',
                 ],
             ],
+            [
+                'name' => 'project',
+                'ar' => [
+                    'title' => 'بعض من مشاريعنا',
+                    'description' => 'نبذه صغيره عن بعض من المشاريع التي تقوم الشركه وادارتها.',
+                ],
+                'en' => [
+                    'title' => 'Some of our works',
+                    'description' => 'A brief summary of some of the projects that the company undertakes and manages.',
+                ],
+            ],
+            [
+                'name' => 'blog',
+                'ar' => [
+                    'title' => 'المقالات',
+                    'description' => 'بعض من المنشورات نقدم فيها معلومات طبيه.',
+                ],
+                'en' => [
+                    'title' => 'Posts',
+                    'description' => 'Some of the leaflets provide medical information.',
+                ],
+            ],
             // [
             //     'name' => 'home',
             //     'ar' => [

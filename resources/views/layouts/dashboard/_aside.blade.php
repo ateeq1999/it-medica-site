@@ -43,6 +43,9 @@
             @if (auth()->user()->hasPermission('read_projects'))
                 <li><a href="{{ route('dashboard.projects.index') }}"><i class="fa fa-th"></i><span>@lang('site.projects')</span></a></li>
             @endif
+            @if (auth()->user()->hasPermission('read_blogs'))
+                <li><a href="{{ route('dashboard.blogs.index') }}"><i class="fa fa-th"></i><span>@lang('site.blogs')</span></a></li>
+            @endif
         </ul>
     </section>
 </aside>

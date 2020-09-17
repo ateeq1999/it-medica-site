@@ -15,7 +15,7 @@
             Route::resource('services','ServicesController')->except(['show']);
             Route::resource('projects','ProjectController')->except(['show']);
             Route::resource('products','ProductController')->except(['show']);
-
+            Route::resource('blogs','BlogController')->except(['show']);
             Route::resource('clients','ClientController')->except(['show']);
         });   
     });

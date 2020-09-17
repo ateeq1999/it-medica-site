@@ -18,6 +18,9 @@ class Category extends Model
         return asset('uploads/categories_images/'.$this->image);
     }
     
+    public function blogs(){
+        return $this->hasMany('App\Blog');
+    }
     public function products(){
         return $this->hasMany('App\Product');
     }

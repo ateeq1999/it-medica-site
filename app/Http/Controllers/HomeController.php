@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Client;
 use App\Product;
+use App\Project;
 use App\Service;
 use App\Block;
+use App\Blog;
 
 class HomeController extends Controller
 {
@@ -16,7 +18,7 @@ class HomeController extends Controller
     {
         $clients = Client::all();
         $services = Service::all();
-        $projects = Category::all();
+        $projects = Project::all();
         $testimonials = Category::all();
         $home = Block::where('name', 'home')->first();
         $service = Block::where('name', 'service')->first();
@@ -36,21 +38,22 @@ class HomeController extends Controller
     {
         $clients = Client::all();
         $services = Service::all();
-        $blogs = Category::all();
-        $projects = Category::all();
+        $blogs = Blog::paginate(3);
+        $projects = Project::all();
         $testimonials = Category::all();
         $home = Block::where('name', 'home')->first();
         $service = Block::where('name', 'service')->first();
         $about = Block::where('name', 'about')->first();
         $contactus = Block::where('name', 'contactus')->first();
-        $project = Block::where('name', 'about')->first();
+        $project = Block::where('name', 'project')->first();
         $pricing = Block::where('name', 'service')->first();
-        $test  = Block::where('name', 'itro')->first();
+        $test  = Block::where('name', 'intro')->first();
+        $blog  = Block::where('name', 'blog')->first();
 
         return view('site.test', compact(
             'services', 'clients', 'home', 'service',
             'about', 'projects', 'pricing', 'contactus',
-            'testimonials', 'test', 'project', 'blogs'
+            'testimonials', 'test', 'project', 'blogs', 'blog'
         ));
     }
 

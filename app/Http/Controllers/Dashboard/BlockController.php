@@ -53,7 +53,7 @@ class BlockController extends Controller
 
         $request_data=$request->all();
 
-        dd($request_data);
+        // dd($request_data);
         if($request->image){
             Image::make($request->image)->resize(300, null, function ($constraint) {
                 $constraint->aspectRatio();
