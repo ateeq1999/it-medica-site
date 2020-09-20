@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>@lang('site.pannel')</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Favicons -->
+  <link href="{{ asset('folio/assets/img/logo.jpg') }}" rel="icon">
+  <link href="{{ asset('folio/assets/img/logo.jpg') }}" rel="apple-touch-icon">
 
     {{--<!-- Bootstrap 3.3.7 -->--}}
     <link rel="stylesheet" href="{{ asset('dashboard_files/css/bootstrap.min.css') }}">

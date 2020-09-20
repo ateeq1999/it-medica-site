@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{ asset('folio/assets/img/favicon.png') }}" rel="icon">
-  <link href="{{ asset('folio/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+  <link href="{{ asset('folio/assets/img/logo.jpg') }}" rel="icon">
+  <link href="{{ asset('folio/assets/img/logo.jpg') }}" rel="apple-touch-icon">
 
   <!-- Vendor CSS Files -->
   <link href="{{ asset('folio/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">

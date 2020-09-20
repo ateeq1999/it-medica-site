@@ -18,7 +18,7 @@
           <div class="col-md-4">
             <div class="card card-blog">
               <div class="card-img">
-                <a href="blog-single.html"><img src="{{ $blog->image_path }}" alt="" class="img-fluid"></a>
+                <a href="{{ route('site.blogs.show', $blog->id ) }}"><img src="{{ $blog->image_path }}" alt="" class="img-fluid"></a>
               </div>
               <div class="card-body">
                 <div class="card-category-box">
@@ -26,7 +26,7 @@
                     <h6 class="category">{{ $blog->category->name }}</h6>
                   </div>
                 </div>
-                <h3 class="card-title"><a href="blog-single.html">{{ $blog->title }}</a></h3>
+                <h3 class="card-title"><a href="{{ route('site.blogs.show', $blog->id ) }}">{{ $blog->title }}</a></h3>
                 <p class="card-description">
                   {!!$blog->body!!}
                 </p>

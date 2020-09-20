@@ -135,8 +135,8 @@ return [
     'team' => 'Team',
     'blocks' => 'Blocks',
     'finished' => 'Finished',
-    'blogs' => 'Blogs',
-    'blog' => 'Blog',
+    'blogs' => 'Posts',
+    'blog' => 'Post',
     'projects' => 'Projects',
     'rights' => 'All rights reserved',
     'social' => 'Social Share',
@@ -171,4 +171,6 @@ return [
     'designed-by' => 'Designed by',
     'copy-rights' => 'Copyright',
     'recent-blog' => 'Recent Post',
+    'open' => 'Open',
+    'blog' => 'Blog',
 ];

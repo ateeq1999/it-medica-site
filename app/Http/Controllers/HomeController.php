@@ -82,12 +82,12 @@ class HomeController extends Controller
 
     public function blogs()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::latest('created_at')->paginate(9);
 
-        // $blog = Block::where('name', 'blog')->first();
+        $blog_block = Block::where('name', 'blog')->first();
 
-        return view('site.blog', compact(
-            'blogs'
+        return view('site.blogs', compact(
+            'blogs', 'blog_block'
         ));
     }
 
