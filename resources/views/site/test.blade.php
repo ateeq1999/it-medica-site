@@ -22,7 +22,7 @@
 		<!-- End Portfolio Section -->
 
 		<!-- ======= Testimonials Section ======= -->
-		@include('partials.folio.testimonials', [ 'testimonials' => $testimonials ])
+		{{-- @include('partials.folio.testimonials', [ 'testimonials' => $testimonials ]) --}}
 		<!-- End Testimonials Section -->
 
 		<!-- ======= Blog Section ======= -->

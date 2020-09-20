@@ -8,7 +8,7 @@
                         <div class="testimonial-box">
                             <div class="author-test">
                                 <img src="{{ $test->image_path }}" alt="" class="rounded-circle b-shadow-a">
-                                <span class="author">Xavi Alonso</span>
+                                <span class="author">{{$test->title}}</span>
                             </div>
                             <div class="content-test">
                                 <p class="description lead">

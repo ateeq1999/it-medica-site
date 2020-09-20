@@ -17,7 +17,8 @@
 			@foreach ($projects as $proj)
 				<div class="col-md-4">
 					<div class="work-box">
-						<a href="{{ asset('folio/assets/img/banner_img.jpg') }}" data-gall="portfolioGallery" class="venobox">
+						{{-- <a href="{{ route('site.projects.show') }}" data-gall="portfolioGallery" class="venobox"> --}}
+						<a href="#" data-gall="portfolioGallery" class="venobox">
 							<div class="work-img">
 							<img src="{{ $proj->image_path }}" alt="" class="img-fluid">
 							</div>
@@ -26,13 +27,14 @@
 							<div class="row">
 								<div class="col-sm-8">
 									<h2 class="w-title">{{ $proj->title }}</h2>
-									<div class="w-more">
-									<span class="w-ctegory">Web Design</span> / <span class="w-date">18 Sep. 2018</span>
-									</div>
+									{{-- <div class="w-more">
+									<span class="w-ctegory">Web</span> / <span class="w-date">18 Sep. 2018</span>
+									</div> --}}
 								</div>
 								<div class="col-sm-4">
 									<div class="w-like">
-									<a href="portfolio-details.html"> <span class="ion-ios-plus-outline"></span></a>
+									<a href="#"> <span class="ion-ios-plus-outline"></span></a>
+									{{-- <a href="{{ route('site.projects.show', $proj->id) }}"> <span class="ion-ios-plus-outline"></span></a> --}}
 									</div>
 								</div>
 							</div>
