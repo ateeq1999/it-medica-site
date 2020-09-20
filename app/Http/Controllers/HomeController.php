@@ -34,6 +34,7 @@ class HomeController extends Controller
             'testimonials', 'test', 'project'
         ));
     }
+
     public function folio()
     {
         $clients = Client::all();
@@ -57,24 +58,37 @@ class HomeController extends Controller
         ));
     }
 
-    public function contact_us_store(Request $request)
+    public function projects()
     {
-        $request->validate([
-            'name' => 'required',
-            'phone' => 'required',
-            'subject' => 'required',
-            'message' => 'required',
-            'item_code' => 'required',
-        ]);
+        $projects = Project::all();
 
-        $client = Client::create([
-            'name' => $request->name,
-            'phone' => $request->phone,
-            'address' => 'sudan',
-        ]);
+        $project = Block::where('name', 'project')->first();
 
-        $client->save();
-
-        return redirect()->back();
+        return view('site.protofolio', compact(
+            'projects', 'project'
+        ));
     }
+
+    public function show_blog(Blog $blog)
+    {
+        $blogs = Blog::all();
+        
+        $categories = Category::all();
+
+        return view('site.blog', compact(
+            'blog', 'blogs', 'categories'
+        ));
+    }
+
+    public function blogs()
+    {
+        $blogs = Blog::all();
+
+        // $blog = Block::where('name', 'blog')->first();
+
+        return view('site.blog', compact(
+            'blogs'
+        ));
+    }
+
 }

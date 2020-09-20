@@ -170,4 +170,5 @@ return [
     'send-message' => 'Send Message Us',
     'designed-by' => 'Designed by',
     'copy-rights' => 'Copyright',
+    'recent-blog' => 'Recent Post',
 ];

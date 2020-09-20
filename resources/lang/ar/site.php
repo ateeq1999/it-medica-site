@@ -175,4 +175,5 @@ return [
     'send-message' => 'راسلنا',
     'designed-by' => 'صمم بواسطه',
     'copy-rights' => 'حقوق النشر',
+    'recent-blog' => 'منشورات حديثه',
 ];

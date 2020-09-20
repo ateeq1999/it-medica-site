@@ -6,15 +6,15 @@
     <div class="intro-content display-table">
       <div class="table-cell">
         <div class="container">
-          <h2 class="intro-title mb-4">Blog Details</h2>
+          <h2 class="intro-title mb-4">{{ $blog->title }}</h2>
           <ol class="breadcrumb d-flex justify-content-center">
             <li class="breadcrumb-item">
-              <a href="#">Home</a>
+              <a href="{{ route('site.home') }}">@lang('site.company-name')</a>
             </li>
             <li class="breadcrumb-item">
-              <a href="#">Library</a>
+              <a href="#">@lang('site.home')</a>
             </li>
-            <li class="breadcrumb-item active">Data</li>
+            <li class="breadcrumb-item active">@lang('site.blogs')</li>
           </ol>
         </div>
       </div>
@@ -33,63 +33,23 @@
                 <img src="assets/img/post-1.jpg" class="img-fluid" alt="">
               </div>
               <div class="post-meta">
-                <h1 class="article-title">Lorem ipsum dolor sit amet consec tetur adipisicing</h1>
+                <h1 class="article-title">{{ $blog->title }}</h1>
                 <ul>
-                  <li>
+                  {{-- <li>
                     <span class="ion-ios-person"></span>
-                    <a href="#">Jason London</a>
-                  </li>
+                    <a href="#">{{ $blog->category->name }}</a>
+                  </li> --}}
                   <li>
                     <span class="ion-pricetag"></span>
-                    <a href="#">Web Design</a>
-                  </li>
-                  <li>
-                    <span class="ion-chatbox"></span>
-                    <a href="#">14</a>
+                    <a href="#">{{ $blog->category->name }}</a>
                   </li>
                 </ul>
               </div>
               <div class="article-content">
-                <p>
-                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum
-                  porta. Quisque velit
-                  nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque
-                  nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                  cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                  Nulla quis lorem ut libero malesuada feugiat.
-                </p>
-                <p>
-                  Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
-                </p>
-                <p>
-                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Praesent
-                  sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                  sem. Donec rutrum congue leo eget malesuada.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat.
-                  Curabitur arcu erat,
-                  accumsan id imperdiet et, porttitor at sem. Vivamus suscipit tortor eget felis porttitor
-                  volutpat. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium
-                  ut lacinia in, elementum id enim.
-                </p>
-                <blockquote class="blockquote">
-                  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                </blockquote>
-                <p>
-                  Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Mauris blandit
-                  aliquet elit, eget tincidunt
-                  nibh pulvinar a. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Donec sollicitudin molestie malesuada.
-                </p>
+                {!!$blog->body!!}
               </div>
             </div>
-            <div class="box-comments">
+            {{-- <div class="box-comments">
               <div class="title-box-2">
                 <h4 class="title-comments title-left">Comments (34)</h4>
               </div>
@@ -190,10 +150,10 @@
                   </div>
                 </div>
               </form>
-            </div>
+            </div> --}}
           </div>
           <div class="col-md-4">
-            <div class="widget-sidebar sidebar-search">
+            {{-- <div class="widget-sidebar sidebar-search">
               <h5 class="sidebar-title">Search</h5>
               <div class="sidebar-content">
                 <form>
@@ -207,73 +167,28 @@
                   </div>
                 </form>
               </div>
-            </div>
+            </div> --}}
             <div class="widget-sidebar">
-              <h5 class="sidebar-title">Recent Post</h5>
+              <h5 class="sidebar-title">@lang('site.recent-blog')</h5>
               <div class="sidebar-content">
                 <ul class="list-sidebar">
-                  <li>
-                    <a href="#">Atque placeat maiores.</a>
-                  </li>
-                  <li>
-                    <a href="#">Lorem ipsum dolor sit amet consectetur</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
-                  <li>
-                    <a href="#">Atque placeat maiores nam quo autem</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="widget-sidebar">
-              <h5 class="sidebar-title">Archives</h5>
-              <div class="sidebar-content">
-                <ul class="list-sidebar">
-                  <li>
-                    <a href="#">September, 2017.</a>
-                  </li>
-                  <li>
-                    <a href="#">April, 2017.</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
-                  <li>
-                    <a href="#">Atque placeat maiores nam quo autem</a>
-                  </li>
-                  <li>
-                    <a href="#">Nam quo autem exercitationem.</a>
-                  </li>
+                  @foreach ($blogs as $bl)
+                    <li>
+                      <a href="{{ route('site.blogs.show', $bl->id) }}">{{ $bl->title }}</a>
+                    </li>
+                  @endforeach
                 </ul>
               </div>
             </div>
             <div class="widget-sidebar widget-tags">
-              <h5 class="sidebar-title">Tags</h5>
+              <h5 class="sidebar-title">@lang('site.category')</h5>
               <div class="sidebar-content">
                 <ul>
-                  <li>
-                    <a href="#">Web.</a>
-                  </li>
-                  <li>
-                    <a href="#">Design.</a>
-                  </li>
-                  <li>
-                    <a href="#">Travel.</a>
-                  </li>
-                  <li>
-                    <a href="#">Photoshop</a>
-                  </li>
-                  <li>
-                    <a href="#">Corel Draw</a>
-                  </li>
-                  <li>
-                    <a href="#">JavaScript</a>
-                  </li>
+                  @foreach ($categories as $category)
+                    <li>
+                      <a href="#">{{ $category->name }}</a>
+                    </li>
+                  @endforeach
                 </ul>
               </div>
             </div>

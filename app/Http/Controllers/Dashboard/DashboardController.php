@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\User;
-use App\Order;
+use App\Block;
+use App\Blog;
+use App\Service;
+use App\Project;
 use App\Product;
 use App\Category;
 use Illuminate\Http\Request;
@@ -21,18 +24,19 @@ class DashboardController extends Controller
     {
         $products_count=Product::count();
         $categories_count=Category::count();
-        $clients_count=Order::count();
+        $blocks_count=Block::count();
+        $blogs_count=Blog::count();
+        $projects_count=Project::count();
+        $services_count=Service::count();
+        $categories_count=Category::count();
         $users_count=User::whereRoleIs('admin')->count();
 
-        // $sales_data=Order::select(
-        //     DB::raw('YEAR(created_at) as year'),
-        //     DB::raw('MONTH(created_at) as month'),
-        //     DB::raw('SUM(total_price) as sum')
-        // )->groupBy('month')->get();
-        $sales_data = [];
 
-
-        return view('dashboard.index',compact('products_count','categories_count','users_count','clients_count','sales_data'));
+        return view('dashboard.index',compact(
+            'products_count','categories_count','users_count',
+            'services_count','blocks_count','blogs_count',
+            'projects_count',
+        ));
     }
 
     /**
