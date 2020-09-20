@@ -87,7 +87,7 @@ class BlockController extends Controller
      */
     public function edit(Block $block)
     {
-        return view('dashboard.blocks.edit',compact('Block'));
+        return view('dashboard.blocks.edit',compact('block'));
     }
 
     /**
