@@ -15,7 +15,7 @@
       </div>
       <div class="row">
         @foreach ($services as $service)
-            <div class="col-md-4">
+            <div class="col-md-6 col-sm-12">
             <div class="service-box">
                 <div class="service-ico">
                 <span class="ico-circle"><i class="ion-monitor"></i></span>

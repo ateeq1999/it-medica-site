@@ -14,28 +14,7 @@ use App\Blog;
 class HomeController extends Controller
 {
 
-    public function index()
-    {
-        $clients = Client::all();
-        $services = Service::all();
-        $projects = Project::all();
-        $testimonials = Category::all();
-        $home = Block::where('name', 'home')->first();
-        $service = Block::where('name', 'service')->first();
-        $about = Block::where('name', 'about')->first();
-        $contactus = Block::where('name', 'contactus')->first();
-        $project = Block::where('name', 'about')->first();
-        $pricing = Block::where('name', 'service')->first();
-        $test  = Block::where('name', 'itro')->first();
-
-        return view('site.home', compact(
-            'services', 'clients', 'home', 'service',
-            'about', 'projects', 'pricing', 'contactus',
-            'testimonials', 'test', 'project'
-        ));
-    }
-
-    public function folio()
+    public function home()
     {
         $clients = Client::all();
         $services = Service::all();

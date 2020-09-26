@@ -1,15 +1,36 @@
-@extends('layouts.mysite')
+@extends('layouts.folio')
 
 @section('content')
-    <div class="page-body-wrapper">
-        @include('partials.home', [ 'home' => $home ])
-        @include('partials.services', [ 'services' => $services, 'service' => $service ])
-        @include('partials.about', [ 'about' => $about, 'test' => $test ])
-        @include('partials.projects', [ 'projects' => $projects,  'project' => $project ])
-        @include('partials.testimonial', [ 'testimonials' => $testimonials ])
-        {{-- next --}}
-        @include('partials.clients', [ 'clients' => $clients ])
-        {{-- @include('partials.pricing', [ 'pricing' => $pricing ]) --}}
-        @include('partials.contactus', [ 'contactus' => $contactus ])
-    </div>
+
+@include('partials.folio.intro')
+	<main id="main">
+		
+		<!-- ======= Services Section ======= -->
+		@include('partials.folio.services', [ 'services' => $services, 'service' => $service ])
+		<!-- End Services Section -->
+
+		<!-- ======= About Section ======= -->
+		@include('partials.folio.about', ['aboute' => $about ])
+		<!-- End About Section -->
+
+		<!-- ======= Counter Section ======= -->
+		{{-- @include('partials.folio.counter') --}}
+		<!-- End Counter Section -->
+
+		<!-- ======= Portfolio Section ======= -->
+		{{-- @include('partials.folio.projects', [ 'projects' => $projects, 'project' => $project ]) --}}
+		<!-- End Portfolio Section -->
+
+		<!-- ======= Testimonials Section ======= -->
+		{{-- @include('partials.folio.testimonials', [ 'testimonials' => $testimonials ]) --}}
+		<!-- End Testimonials Section -->
+
+		<!-- ======= Blog Section ======= -->
+		@include('partials.folio.blogs', [ 'blog_section' => $blog, 'blogs' => $blogs ])
+		<!-- End Blog Section -->
+
+		<!-- ======= Contact Section ======= -->
+		@include('partials.folio.contactus', [ 'contactus' => $contactus ])
+		<!-- End Contact Section -->
+	</main>
 @endsection

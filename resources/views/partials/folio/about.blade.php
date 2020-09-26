@@ -5,6 +5,18 @@
           <div class="box-shadow-full">
             <div class="row">
               <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="{{ app()->getLocale() == 'en' ? 'title-left text-left' : 'title-right text-right' }}">
+                        {{ $about->title }}
+                    </h5>
+                  </div>
+                  <p class="{{ app()->getLocale() == 'en' ? 'lead text-left' : 'lead text-right' }}">
+                    {!!$about->description!!}
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
                 {{-- <div class="row">
                   <div class="col-sm-6 col-md-5">
                     <div class="about-img">
@@ -22,18 +34,6 @@
                 </div> --}}
                 <div class="skill-mf">
                   <img src="{{ $about->image_path }}" class="img-fluid rounded b-shadow-a" alt="">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="about-me pt-4 pt-md-0">
-                  <div class="title-box-2">
-                    <h5 class="title-left">
-                        {{ $about->title }}
-                    </h5>
-                  </div>
-                  <p class="lead">
-                    {!!$about->description!!}
-                  </p>
                 </div>
               </div>
             </div>

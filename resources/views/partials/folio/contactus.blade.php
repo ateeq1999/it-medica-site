@@ -8,7 +8,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="title-box-2">
-                    <h5 class="title-left">
+                    <h5 class="{{ app()->getLocale() == 'en' ? 'title-left text-left' : 'title-right text-right' }}">
                       @lang('site.send-message')
                     </h5>
                   </div>
@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-md-12 mb-3">
                           <div class="form-group">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="@lang('site.subject')" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="@lang('site.sub')" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                             <div class="validate"></div>
                           </div>
                         </div>
@@ -51,28 +51,28 @@
                     </form>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 {{ app()->getLocale() == 'en' ? 'text-left' : 'text-right' }}">
                   <div class="title-box-2 pt-4 pt-md-0">
-                    <h5 class="title-left">
+                    <h5 class="{{ app()->getLocale() == 'en' ? 'title-left' : 'title-right' }}">
                         {{ $contactus->title }}
                     </h5>
                   </div>
                   <div class="more-info">
-                    <p class="lead">
+                    {{-- <p class="lead">
                         {!!$contactus->description!!}
-                    </p>
-                    <ul class="list-ico">
-                      <li><span class="ion-ios-location"></span> @lang('site.address1')</li>
-                      <li><span class="ion-ios-telephone"></span> @lang('site.company-phone')</li>
-                      <li><span class="ion-email"></span> @lang('site.company-email')</li>
-                    </ul>
+                    </p> --}}
+                      <ul class="list-ico">
+                        <li><span class="ion-ios-location {{ app()->getLocale() == 'ar' ? 'ml-2' : '' }}"></span> @lang('site.address1') </li>
+                        <li><span class="ion-ios-telephone {{ app()->getLocale() == 'ar' ? 'ml-2' : '' }}"></span> @lang('site.company-phone') </li>
+                        <li><span class="ion-email {{ app()->getLocale() == 'ar' ? 'ml-2' : '' }}"></span> @lang('site.company-email') </li>
+                      </ul>
                   </div>
                   <div class="socials">
                     <ul>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
-                      <li><a href=""><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li>
+                      <li><a href="#"><span class="ico-circle"><i class="ion-social-facebook"></i></span></a></li>
+                      <li><a href="#"><span class="ico-circle"><i class="ion-social-instagram"></i></span></a></li>
+                      <li><a href="#"><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
+                      {{-- <li><a href="#"><span class="ico-circle"><i class="ion-social-pinterest"></i></span></a></li> --}}
                     </ul>
                   </div>
                 </div>

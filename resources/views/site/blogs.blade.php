@@ -1,7 +1,7 @@
 @extends('layouts.folio')
 
 @section('content')
-<div class="intro intro-single route bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
+  <div class="intro intro-single route bg-image" style="background-image: url(assets/img/overlay-bg.jpg)">
     <div class="overlay-mf"></div>
     <div class="intro-content display-table">
       <div class="table-cell">

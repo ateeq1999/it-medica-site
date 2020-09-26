@@ -32,12 +32,6 @@
                 </p>
               </div>
               <div class="card-footer">
-                {{-- <div class="post-author">
-                  <a href="#">
-                    <img src="{{ asset('folio/assets/img/testimonial-2.jpg') }}" alt="" class="avatar rounded-circle">
-                    <span class="author">Morgan Freeman</span>
-                  </a>
-                </div> --}}
                 <div class="post-date">
                   <span class="ion-ios-clock-outline"></span> {{$blog->created_at}}
                 </div>
@@ -45,6 +39,11 @@
             </div>
           </div>
         @endforeach
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-12 col-sm-12 d-flex justify-content-center">
+            <a href="{{ route('site.blogs') }}" class="button button-a button-big button-rouded text-white">@lang('site.view_all')</a>
+        </div>
       </div>
     </div>
   </section>
