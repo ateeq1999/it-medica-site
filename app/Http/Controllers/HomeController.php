@@ -30,7 +30,7 @@ class HomeController extends Controller
         $test  = Block::where('name', 'intro')->first();
         $blog  = Block::where('name', 'blog')->first();
 
-        return view('site.test', compact(
+        return view('site.home', compact(
             'services', 'clients', 'home', 'service',
             'about', 'projects', 'pricing', 'contactus',
             'testimonials', 'test', 'project', 'blogs', 'blog'
